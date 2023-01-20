@@ -1,0 +1,43 @@
+.rodape {
+    min-height: 360px;
+    background: rgb(0, 141, 128);
+    background: linear-gradient(90deg, rgba(0, 141, 128, .8) 0%, rgba(4, 201, 161, 1) 100%);
+
+    .titulo {
+        font-family: 'gotham-bold';
+        font-size: 0.9375rem;
+        line-height: 1.07;
+        letter-spacing: -0.25px;
+    }
+
+    ul {
+        padding-left: 0;
+        li, li h3, li h3 .nav-link {
+            list-style: none;
+            padding: 0;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 0.8125rem;
+            line-height: 1.23;
+            letter-spacing: -0.21px;
+            &:hover {
+                color: #fff;
+                opacity: .8;
+            }
+        }
+    }
+
+    .idiomas {
+        button {
+            font-size: 0.75rem;
+            letter-spacing: -0.2px;
+            &.ativo {
+                border-bottom: 1px solid #fff;
+            }
+        }
+    }
+    .copy {
+        font-size: 0.75rem;
+        letter-spacing: -0.2px;
+    }
+}

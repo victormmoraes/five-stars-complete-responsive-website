@@ -1,0 +1,132 @@
+.menu {
+    .navbar {
+        .navbar-brand {
+            max-width: 190px;
+            max-height: 40px;
+            margin-right: 50px;
+
+            @include res-sm {
+                width: 130px;
+                height: 27px;
+            }
+        }
+
+        .navbar-toggler {
+            color: transparent;
+            border: none;
+
+            .navbar-toggler-icon {
+                background-image: url("../img/menu-mobile.svg");
+                width: 18px;
+                height: 18px;
+                max-width: 100%;
+            }
+
+            .navbar-close-icon {
+                background-image: url("../img/close.svg");
+                width: 18px;
+                height: 18px;
+                max-width: 100%;
+                display: none;
+                vertical-align: middle;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+            }
+        }
+
+        .navbar-collapse {
+
+            .navbar-nav {
+                .nav-item {
+                    margin: 0 3rem 0 0;
+
+                    .nav-link {
+                        color: #666;
+                        font-size: 1rem;
+                        line-height: 1rem;
+                        text-align: center;
+                        letter-spacing: -0.26px;
+                        transition: all ease .2s;
+
+                        @media screen and (max-width:1199px) {
+                            font-size: .8rem;
+                        }
+
+                        @include res-lg {
+                            font-size: .7rem;
+                        }
+
+                        &:hover {
+                            color: rgb(61, 61, 61);
+                            transition: all ease .2s;
+                            opacity: .7;
+                        }
+                    }
+                }
+
+                @include res-lg {
+                    display: flex;
+                    height: 45vh;
+                    flex-direction: column;
+                    align-items: start;
+                    margin-top: 3rem;
+
+                    .nav-item {
+                        .nav-link {
+                            text-align: start;
+                            font-family: 'gotham-black';
+                            font-size: 1.125rem;
+                            line-height: 1;
+                            letter-spacing: -0.29px;
+                            margin-bottom: 40px;
+                            color: #3f544e;
+                        }
+
+                        .btn {
+                            @include btn;
+                            width: 310px;
+                            height: 38px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            @include res-sm {
+                                width: 80vw;
+                            }
+
+
+
+                            .nav-link {
+                                color: #FFF;
+                                margin-bottom: 0;
+
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    color: #04b7a7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    &.ativo {
+        .navbar {
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    display: none;
+                }
+
+                .navbar-close-icon {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
